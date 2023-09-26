@@ -46,6 +46,10 @@ body {
     padding: 0 40px;
 }
 
+.pad-up-90 {
+    padding-top: 90px;
+}
+
 .mar-top-30 {
     margin-top: 30px;
 }
@@ -184,3 +188,39 @@ box-shadow: 6px 5px 13px -4px rgba(3,0,26,1);
 .text-wrapper {
     width: 30%;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .custom {
+    grid-column: 1/1.5
+  }
+
+  .grid-item img {
+    width: 50px;
+  }
+
+  .grid-item h5 {
+    font-family: 'Roboto';
+    font-weight: 400;
+  }
+
+
+  .grid-item p {
+    font-size: 18px;
+    width: 70%;
+    font-family: 'RobotoTh';
+  }
