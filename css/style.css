@@ -224,3 +224,7 @@ box-shadow: 6px 5px 13px -4px rgba(3,0,26,1);
     width: 70%;
     font-family: 'RobotoTh';
   }
+
+  .img-wrapper-l {
+    justify-content: flex-start;
+  }
