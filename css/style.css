@@ -278,3 +278,18 @@ box-shadow: 6px 5px 13px -4px rgba(3,0,26,1);
     align-items: center;
     justify-content: center;
 }
+
+.contact-left,
+.contact-right {
+    width: 50%;
+}
+
+.contact-left {
+    width: 30%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-left div {
+    padding-bottom: 25px;
+}
