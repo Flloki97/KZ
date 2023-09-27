@@ -242,6 +242,7 @@ box-shadow: 6px 5px 13px -4px rgba(3,0,26,1);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 60px;
   }
 
   .up-txt h4 {
@@ -254,3 +255,26 @@ box-shadow: 6px 5px 13px -4px rgba(3,0,26,1);
     padding-top: 20px;
     font-family: RobotoTh;
   }
+
+  .dwn-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-left img {
+  width: 22px;
+}
+
+.number,
+.email,
+.address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
