@@ -228,3 +228,29 @@ box-shadow: 6px 5px 13px -4px rgba(3,0,26,1);
   .img-wrapper-l {
     justify-content: flex-start;
   }
+
+  .divider-goldblur {
+    width: 100%;
+  }
+
+  .divider-goldblur svg {
+    width: 100%;
+  }
+
+  .up-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .up-txt h4 {
+    font-size: 40px;
+  }
+
+  .up-txt p {
+    width: 50%;
+    text-align: center;
+    padding-top: 20px;
+    font-family: RobotoTh;
+  }
