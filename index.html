@@ -164,7 +164,7 @@
                     </form> -->
 
 
-                    <form action="#" method="post">
+                    <form onsubmit="sendEmail()"; reset(); return false;>
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
                     
@@ -197,7 +197,6 @@
     </div>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    </script>
     <script src="js/global.js"></script>
 </body>
 </html>
