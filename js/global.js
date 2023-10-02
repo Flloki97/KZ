@@ -1,21 +1,52 @@
-function sendEmail() {
-  Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "fbryma7@gmail.com",
-    Password : "D800BED456FDAF052FB9F6F840526D5A24D8",
-    To : 'florentbryma7@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New Contact Form Enquiry",
-    Body : "And this is the body"
-  }).then(
-  message => alert(message)
-  );
-}
+var contactForm = document.querySelector("#contact-form");
+var submitBtn = document.getElementById('submit');
+var nameInput = document.getElementById('name');
+var emailInput = document.getElementById('email');
+var subjectInput = document.getElementById('subject');
+
+const publicKey = "8awtboEqiYo-Bx217";
+const serviceID = "service_p5igaha";
+const templateID = "template_msu2h2j";
+
+emailjs.init(publicKey);
+contactForm.addEventListener("submit", e => {
+  e.preventDefault
+  submitBtn.innerText = "Just a Moment...";
+
+  const inputFields = {
+    name: nameInput.value,
+    email: emailInput.value,
+    message: subjectInput.value
+  }
+
+  emailjs.send(serviceID, templateID, inputFields)
+    .then(() => {
+      submitBtn.innerText = "Message Sent Successfully";
+      nameInput.value = "";
+      emailInput.value = "";
+      subjectInput.value = "";
+    }, (error) => {
+      console.log(error);
+      submitBtn.innerText = "Something went wrong";
+    })
+
+})
 
 
 
-
-
+// function sendEmail() {
+//   Email.send({
+//     Host : "smtp.elasticemail.com",
+//     Username : "fbryma7@gmail.com",
+//     Password : "D800BED456FDAF052FB9F6F840526D5A24D8",
+//     To : 'florentbryma7@gmail.com',
+//     From : document.getElementById("email").value,
+//     Subject : "New Contact Form Enquiry",
+//     Body : "And this is the body"
+//   }).then(
+//   message => alert(message)
+//   );
+// }
 
 
 
