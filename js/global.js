@@ -1,29 +1,52 @@
-function emailSend() {
-    var userName = document.getElementById('name').value;
-    var userLastName = document.getElementById('lastname').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    var messageBody = "Name " + userName +
-    "<br/> Last Name " + userLastName +
-	"<br/> Email " + email +
-	"<br/> Message " + message;
+// var btn = document.getElementById('btn');
+// btn.addEventListener('click', function(e) {
+//     e.preventDefault()
+//     var name = document.getElementById('name').value;
+//     var email = document.getElementById('email').value;
+//     var subject = document.getElementById('subject').value;
+//     var message = document.getElementById('message').value;
+//     var body = 'name: ' + name + '<br/> email: ' + email  + '<br/> subject: ' + subject  + '<br/> message: ' + message;
 
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "fbryma7@gmail.com",
-        Password : "01D0DE58DD3380C9A9DD383D1A820813B8B4",
-        To : 'florentbryma7@gmail.com',
-        From : "fbryma7@gmail.com",
-        Subject : "This is the subject",
-        Body : messageBody
-    }).then(
-        message => {
-            if(message === 'OK'){
-                console.log("Secussful", "You clicked the button!", "success");
-            }
-            else{
-                console.log("Error", "You clicked the button!", "error");
-            }
-        }
-    );
+//     Email.send({
+//         SecureToken : "58aa2e5b-4c73-4a77-a428-acfea04beccd",
+//         To : 'fbryma7@gmail.com',
+//         From : "florentbryma7@gmail.com",
+//         Subject : "contact message",
+//         Body : body
+//     }).then(
+//       message => alert(message)
+//     );
+
+// })
+
+
+function validateForm() {
+  var name = document.forms["contactForm"]["name"].value;
+  var email = document.forms["contactForm"]["email"].value;
+  var message = document.forms["contactForm"]["message"].value;
+  var error = "";
+
+  if (name == "") {
+      error += "Please enter your name.\n";
+  }
+
+  if (email == "") {
+      error += "Please enter your email address.\n";
+  } else if (!validateEmail(email)) {
+      error += "Please enter a valid email address.\n";
+  }
+
+  if (message == "") {
+      error += "Please enter a message.\n";
+  }
+
+  if (error != "") {
+      alert(error);
+      return false;
+  }
+}
+
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
 }

@@ -145,21 +145,36 @@
                     </div>
                 </div>
                 <div class="contact-right">
-                    <!-- <form id="contactForm" action="https://flloki97.github.io/KZ/send_email.php" method="post" netlify>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required><br><br>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br><br>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                        <input type="submit" value="Submit">
+                    <!-- <form method="post" action="send-email.php">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" required>
+                        
+                        <label for="email">email</label>
+                        <input type="email" name="email" id="email" required>
+                        
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" required>
+                        
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" required></textarea>
+                        
+                        <br>
+                        
+                        <button id="btn">Send</button>
                     </form> -->
-                    <form onsubmit="emailSend(); reset(); return false;">
-                        <input type="text" id="name" placeholder="Name" name="name" required>
-                        <input type="text" id="lastname" placeholder="Last Name" name="lastname" required>
-                        <input type="email" id="email" placeholder="email" name="email" required>
-                        <input type="text" id="text" placeholder="Message" name="text" required>
-                        <button type="submit" class="btn">submit</button>
+
+
+                    <form action="#" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    
+                        <input type="submit" value="Send">
                     </form>
                 </div>       
             </div>
@@ -181,8 +196,7 @@
         
     </div>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<script src="https://smtpjs.com/v3/smtp.js">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     </script>
     <script src="js/global.js"></script>
 </body>

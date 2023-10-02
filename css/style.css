@@ -303,7 +303,8 @@ box-shadow: 6px 5px 13px -4px rgba(3,0,26,1);
     width: 100%;
 }
 
-.contact-right form input {
+.contact-right form input,
+.contact-right form textarea {
     width: 70%;
     background: transparent;
     outline: none;
@@ -321,4 +322,43 @@ box-shadow: 6px 5px 13px -4px rgba(3,0,26,1);
 
 .btn:hover {
     background-color: #DABD71;
+}
+
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
 }
