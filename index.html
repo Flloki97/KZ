@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Kaizen</title>
+    <script src="./js/global.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("8awtboEqiYo-Bx217");
+        })();
+    </script>
 </head>
 <body>
     <div class="container">
@@ -145,22 +152,48 @@
                     </div>
                 </div>
                 <div class="contact-right">
+                    <div id="successmessage" class="success-message">
+                        <h3>Thanks for contacting us! We will be in touch with you shortly</h3>
+                    </div>
+                    <div id="formcontact" class="form-contact">
+                        <h1>Contact Form</h1>
+                    <div class="form-group">
+                        <h5 for="name">Name</h5>
+                        <input 
+                        class="form-control" 
+                        placeholder="Enter your name" 
+                        type="text" 
+                        name="name" 
+                        id="name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <h5 for="lastname">Last Name</h5>
+                        <input 
+                        class="form-control" 
+                        placeholder="Enter your last name" 
+                        type="text" 
+                        name="lastname" 
+                        id="lastname"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <h5 for="email">Email</h5>
+                        <input 
+                        class="form-control" 
+                        placeholder="Enter your email" 
+                        type="email" 
+                        name="email" 
+                        id="email"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <h5 for="message">Message</h5>
+                        <textarea name="" id="message" rows="3" class="form-control"></textarea>
 
-                    <form id="contact-form" method="post" action="sendmail.php" enctype="multipart/form-data">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required><br>
-                
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br>
-                
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea><br>
-                
-                        <label for="attachment">Attachment:</label>
-                        <input type="file" id="attachment" name="attachment"><br>
-                
-                        <input type="submit" value="Submit">
-                    </form>
+                    </div>
+                    <button onclick="sendMail()" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>       
             </div>
         </div>
@@ -181,7 +214,5 @@
         
     </div>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="js/global.js"></script>
 </body>
 </html>
