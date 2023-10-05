@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Kaizen</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script> 
     <script src="./js/global.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -18,28 +23,31 @@
         <header>
             <div class="menu-container pad-sid-40">
                 <div class="logo-wrapper">
-                    <img src="img/Logo.png" alt="logo">
+                    <a href="#"><img src="img/Logo.png" alt="logo"></a>
                 </div>
+                <div id="burger-menu">
+                    <span></span>
+                  </div>
                 <nav>
                     <div class="menu-wrapper">
                         <li>
-                            <a href="#">Home</a> 
+                            <a href="#home">Home</a> 
                         </li>
                         <li>
-                            <a href="#">About Us</a>
+                            <a href="#aboutus">About Us</a>
                         </li>
                         <li>
-                            <a href="#">Services</a> 
+                            <a href="#services">Services</a> 
                         </li>
                         <li>
-                            <a href="#">Contact</a> 
+                            <a href="#contact">Contact</a> 
                         </li>
                     </div>
                 </nav>
             </div>
         </header>
         
-        <div class="hero-container pad-sid-40">
+        <div class="hero-container pad-sid-40" id="home">
             <div class="hero-wrapper-black"></div>
             <div class="wrapper-of-hero">
                 <h1>Welcome to Kaizen Opportunity <br/> Where Careers Thrive</h1>
@@ -50,7 +58,7 @@
             </div>
         </div>
 
-        <div class="about-section pad-sid-40 mar-top-30">
+        <div class="about-section pad-sid-40 mar-top-30" id="aboutus">
             <h2>Our Mission</h2>
             <div class="about-content">
                 <div class="text-wrapper">
@@ -62,36 +70,36 @@
             </div>
         </div>
 
-        <div class="services-section pad-sid-40 pad-up-90">
+        <div class="services-section pad-sid-40 pad-up-90" id="services">
             <div class="grid-container">
                 <div class="grid-item">
                     <img src="img/experience.png" alt="icon">
-                    <h5>Test</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium asperiores error reprehenderit vel illum quis commodi magni laborum rerum omnis similique ea quae reiciendis, placeat cupiditate corporis quod tempora expedita.</p>
+                    <h5>Expertise</h5>
+                    <p>Our team is composed of industry experts who possess an in-depth understanding of quantitative finance and risk management. We stay ahead of industry trends and are well-versed in the unique challenges and opportunities these fields offer.</p>
                 </div>
                 <div class="grid-item">
-                    <img src="img/experience.png" alt="icon">
-                    <h5>Test</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium asperiores error reprehenderit vel illum quis commodi magni laborum rerum omnis similique ea quae reiciendis, placeat cupiditate corporis quod tempora expedita.</p>
+                    <img src="img/global-marketing.png" alt="icon">
+                    <h5>Global Reach</h5>
+                    <p>We operate on a global scale, transcending geographical boundaries to unite talent and opportunity. Our extensive network spans the world's financial hubs, ensuring access to the best opportunities no matter where you are.</p>
                 </div>
                 <div class="grid-item">
-                    <img src="img/experience.png" alt="icon">
-                    <h5>Test</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium asperiores error reprehenderit vel illum quis commodi magni laborum rerum omnis similique ea quae reiciendis, placeat cupiditate corporis quod tempora expedita.</p>
+                    <img src="img/efficacy.png" alt="icon">
+                    <h5>Efficiency</h5>
+                    <p>We understand the value of time in the fast-paced world of finance. Our streamlined approach ensures swift, high-quality placements, saving you valuable time and resources.</p>
                 </div>
                 <div class="grid-item">
-                    <img src="img/experience.png" alt="icon">
-                    <h5>Test</h5>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium asperiores error reprehenderit vel illum quis commodi magni laborum rerum omnis similique ea quae reiciendis, placeat cupiditate corporis quod tempora expedita.</p>
+                    <img src="img/commitment.png" alt="icon">
+                    <h5>Commitment</h5>
+                    <p>Your success is our success. We are dedicated to helping you achieve your goals, whether you're a candidate seeking your dream role or an employer in search of top-tier talent.</p>
                 </div>
               </div>
         </div>
 
         <div class="about-section pad-sid-40 mar-top-30 pad-up-90">
-            <h2>Our Mission</h2>
+            <h2>Our Approach</h2>
             <div class="about-content">
                 <div class="img-wrapper img-wrapper-l">
-                    <img src="img/team.jpg" alt="team-image">
+                    <img src="img/pexels-fauxels-3183150.jpg" alt="team-image">
                 </div>
                 <div class="text-wrapper">
                     Our approach is rooted in precision and personalization. We don't believe in generic matches. Instead, we take the time to understand your unique needs, goals, and aspirations. For candidates, this means finding a role that aligns perfectly with your skills and ambitions. For employers, it means securing professionals who not only meet your criteria but also share your vision.
@@ -131,12 +139,12 @@
             </svg>
         </div>
 
-        <div class="contact-us-wrapper pad-up-90 pad-sid-40">
+        <div class="contact-us-wrapper pad-up-90 pad-sid-40" id="contact">
             <div class="up-txt">
                 <h4>Get in Touch</h4>
                 <p>Ready to take the next step? Contact us today to explore how Kaizen Opportunity can be your partner in success. Your extraordinary career journey starts here.</p>
             </div>
-            <div class="dwn-txt">
+            <div class="dwn-txt mar-top-60">
                 <div class="contact-left">
                     <div class="number">
                         <img src="img/telephone.png" alt="phone number">
@@ -156,7 +164,6 @@
                         <h3>Thanks for contacting us! We will be in touch with you shortly</h3>
                     </div>
                     <div id="formcontact" class="form-contact">
-                        <h1>Contact Form</h1>
                     <div class="form-group">
                         <h5 for="name">Name</h5>
                         <input 
@@ -165,6 +172,7 @@
                         type="text" 
                         name="name" 
                         id="name"
+                        required="true"
                         />
                     </div>
                     <div class="form-group">
@@ -175,6 +183,7 @@
                         type="text" 
                         name="lastname" 
                         id="lastname"
+                        required="true"
                         />
                     </div>
                     <div class="form-group">
@@ -185,11 +194,12 @@
                         type="email" 
                         name="email" 
                         id="email"
+                        required="true"
                         />
                     </div>
                     <div class="form-group">
                         <h5 for="message">Message</h5>
-                        <textarea name="" id="message" rows="3" class="form-control"></textarea>
+                        <textarea name="" id="message" rows="6" class="form-control" placeholder="Enter your message" required="true"></textarea>
 
                     </div>
                     <button onclick="sendMail()" class="btn btn-primary">Submit</button>
@@ -198,21 +208,17 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-        <footer>
-
+        <footer class="mar-top-60 pad-sid-40">
+            <div class="left-side-footer">
+                <h4>©Kaizen 2023</h4>
+            </div>
+            <div class="right-side-footer">
+                <img src="img/Logo.png" alt="">
+            </div>
         </footer>
         
     </div>
 
+    
 </body>
 </html>
