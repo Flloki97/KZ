@@ -1,3 +1,21 @@
+function openMenu() {
+    var mobileMenu = document.getElementById("ham-menu").classList.toggle('opened');
+    var smallMenu = document.getElementById("ham-menu");
+    var styleLineTop = document.getElementById("top-line").style;
+    var styleLineBottom = document.getElementById("bottom-line").style;
+    var dropMenu = document.getElementById("menu-links-container");
+    
+
+    if(smallMenu.classList.contains('opened')) {
+       styleLineTop.webkitTransform ='rotate(45deg) translate(0px, 0px)';
+       styleLineBottom.webkitTransform ='rotate(315deg) translate(7px, -7px)';
+       dropMenu.style.display = "flex";
+    } else {
+       styleLineTop.webkitTransform ='rotate(0deg) translate(0px, 0px)';
+       styleLineBottom.webkitTransform ='rotate(0deg) translate(0px, 0px)';
+       dropMenu.style.display = "none";
+    } 
+  }
 
 function sendMail(){
   var params = {
@@ -26,44 +44,3 @@ function sendMail(){
   
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
- 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
- });
-
- const lenis = new Lenis()
-
-lenis.on('scroll', (e) => {
-//   console.log(e)
-})
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-
-
-
-const lenis2 = new Lenis({
-   duration: 1.2,
-   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-});
-
-function raf(time) {
-   lenis2.raf(time);
-   ScrollTrigger.update();
-   requestAnimationFrame(raf);
-}
-
-// requestAnimationFrame(raf);
-
-const section_1 = document.getElementById("container");
-const col_left = document.querySelector(".col_left");
-const timeln = gsap.timeline({paused: true});

@@ -28,6 +28,8 @@
     src: url(/fonts/Roboto-Black.ttf);
 }
 
+html{scroll-behavior:smooth}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -79,18 +81,19 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 400px;
+    
 }
 
-.menu-wrapper li a {
+.menu-wrapper a {
     color: #DABD71;
     font-family: RobotoM;
     font-size: 18px;
     transition: all 0.2s;
+    scroll-behavior: smooth;
 }
 
-
-.menu-wrapper li a:hover {
-    color: #cdaf62;
+.menu-wrapper a:hover {
+    color: #ffd56a;
 }
 
 /* Hero style */
@@ -176,6 +179,10 @@ body {
 .text-wrapper,
 .img-wrapper {
     width: 50%;
+}
+
+.text-wrapper {
+    font-family: RobotoTh;
 }
 
 .img-wrapper {
@@ -389,6 +396,37 @@ div#formcontact {
     padding-bottom: 3px;
 }
 
+.ham-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7px;
+    flex-direction: column;
+    background: none;
+    outline: none;
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+    position: absolute;
+    right: 40px;
+    display: none;
+}
+
+.ham-menu div {
+    width: 40px;
+    height: 3px;
+    background-color: #dcbf76;
+    /* transform: skew(325deg, 0deg); */
+  }
+
+.ham-menu:hover {
+    animation: glitchMenu 1s linear both;
+    animation-delay: 500ms;
+}
+
+
+
 @media (max-width: 600px) {
     .menu-wrapper {
         position: absolute;
@@ -404,64 +442,12 @@ div#formcontact {
         border: 2px solid #dabd71;
         border-left: none;
         border-right: none;
+        display: none;
     }
 
-    #burger-menu {
-        cursor: pointer;
-        height: 27px;
-        width: 27px;
-        margin: 5px;
-        overflow: visible;
-        z-index: 2;
-        position: absolute;
-        right: 20px;
+    .ham-menu {
+        display: flex;
     }
-      #burger-menu span,
-      #burger-menu span:before,
-      #burger-menu span:after {
-        background: #fff;
-        display: block;
-        height: 2px;
-        opacity: 1;
-        position: absolute;
-        transition: 0.3s ease-in-out;
-      }
-      #burger-menu span:before,
-      #burger-menu span:after {
-        content: "";
-      }
-      #burger-menu span:before {
-        left: 0px;
-        top: -10px;
-        width: 27px;
-      }
-      #burger-menu span {
-        right: 0px;
-        top: 13px;
-        width: 27px;
-      }
-      #burger-menu span:after {
-        left: 0px;
-        top: 10px;
-        width: 27px;
-      }
-      #burger-menu.close span:before {
-        top: 0px;
-        transform: rotate(90deg);
-        width: 27px;
-      }
-      #burger-menu.close span {
-        transform: rotate(-45deg);
-        top: 13px;
-        width: 27px;
-      }
-      #burger-menu.close span:after {
-        top: 0px;
-        left: 0;
-        transform: rotate(90deg);
-        opacity: 0;
-        width: 0;
-      }
 }
 
 @media (max-width: 1024px) {
@@ -473,4 +459,77 @@ div#formcontact {
         width: 70%;
     }
 }
+
+@media (min-width: 600px) {
+    .menu-wrapper {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .text-wrapper, 
+    .img-wrapper {
+        width: 100%;
+    }
+
+    .img-wrapper img {
+        width: 100%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .up-txt p {
+        width: 100%;
+    }
+
+    .dwn-txt {
+        flex-direction: column;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    #formcontact {
+        align-items: flex-start !important;
+    }
+
+    .grid-item {
+        padding: 15px 0px;
+    }
+
+    .grid-item p {
+        width: 100%;
+    }
+
+    .img-wrapper-l {
+        margin-bottom: 25px;
+    }
+
+    .img-wrapper img {
+        margin-top: 25px;
+    }
+
+    .hero-container h1 {
+        font-size: 35px;
+    }
+
+    .hero-container {
+        height: 70vh;
+    }
+
+    .wrapper-of-hero {
+        height: 50%;
+    }
+
+}
+
+
 

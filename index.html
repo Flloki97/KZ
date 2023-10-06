@@ -17,6 +17,8 @@
             emailjs.init("8awtboEqiYo-Bx217");
         })();
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
 </head>
 <body>
     <div class="container">
@@ -25,11 +27,12 @@
                 <div class="logo-wrapper">
                     <a href="#"><img src="img/Logo.png" alt="logo"></a>
                 </div>
-                <div id="burger-menu">
-                    <span></span>
-                  </div>
+                <button onclick="openMenu()" class="ham-menu" id="ham-menu">
+                    <div class="top-line" id="top-line"></div>
+                    <div class="bottom-line" id="bottom-line"></div>
+                </button>
                 <nav>
-                    <div class="menu-wrapper">
+                    <div class="menu-wrapper" id="menu-links-container">
                         <li>
                             <a href="#home">Home</a> 
                         </li>
@@ -46,18 +49,16 @@
                 </nav>
             </div>
         </header>
-        
         <div class="hero-container pad-sid-40" id="home">
             <div class="hero-wrapper-black"></div>
             <div class="wrapper-of-hero">
                 <h1>Welcome to Kaizen Opportunity <br/> Where Careers Thrive</h1>
-                <a href="#" class="gt-btn">Get in Touch</a>
-                <a href="#">
+                <a href="#contact" class="gt-btn">Get in Touch</a>
+                <a href="#aboutus">
                     <img src="img/arr-dwn.png" alt="down-arrow" class="dwn-arrow">
                 </a>
             </div>
         </div>
-
         <div class="about-section pad-sid-40 mar-top-30" id="aboutus">
             <h2>Our Mission</h2>
             <div class="about-content">
@@ -69,7 +70,6 @@
                 </div>
             </div>
         </div>
-
         <div class="services-section pad-sid-40 pad-up-90" id="services">
             <div class="grid-container">
                 <div class="grid-item">
@@ -94,7 +94,6 @@
                 </div>
               </div>
         </div>
-
         <div class="about-section pad-sid-40 mar-top-30 pad-up-90">
             <h2>Our Approach</h2>
             <div class="about-content">
@@ -108,7 +107,6 @@
                 </div>
             </div>
         </div> 
-
         <div class="divider-goldblur pad-up-90 mar-top-30">
             <svg width="1908" height="33" viewBox="0 0 1908 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_4_2)">
@@ -123,7 +121,6 @@
                 </defs>
                 </svg>
         </div>
-
         <div class="divider-goldblur">
             <svg width="1908" height="33" viewBox="0 0 1908 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_4_2)">
@@ -138,7 +135,6 @@
                 </defs>
             </svg>
         </div>
-
         <div class="contact-us-wrapper pad-up-90 pad-sid-40" id="contact">
             <div class="up-txt">
                 <h4>Get in Touch</h4>
@@ -207,7 +203,6 @@
                 </div>       
             </div>
         </div>
-
         <footer class="mar-top-60 pad-sid-40">
             <div class="left-side-footer">
                 <h4>©Kaizen 2023</h4>
@@ -216,9 +211,6 @@
                 <img src="img/Logo.png" alt="">
             </div>
         </footer>
-        
     </div>
-
-    
 </body>
 </html>
