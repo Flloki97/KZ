@@ -7,6 +7,8 @@
     <link rel="icon" href="favicon.jpg">
     <title>Kaizen</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spinkit@1.2.5/css/spinkit.min.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
@@ -22,7 +24,23 @@
 </head>
 </head>
 <body>
-    <div class="container">
+    <div class="loading-screen">
+        <svg class="pl" viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="pl-grad1" x1="1" y1="0.5" x2="0" y2="0.5">
+                    <stop offset="0%" stop-color="hsl(313,90%,55%)" />
+                    <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                </linearGradient>
+                <linearGradient id="pl-grad2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="hsl(313,90%,55%)" />
+                    <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+                </linearGradient>
+            </defs>
+            <circle class="pl__ring" cx="100" cy="100" r="82" fill="none" stroke="url(#pl-grad1)" stroke-width="36" stroke-dasharray="0 257 1 257" stroke-dashoffset="0.01" stroke-linecap="round" transform="rotate(-90,100,100)" />
+            <line class="pl__ball" stroke="url(#pl-grad2)" x1="100" y1="18" x2="100.01" y2="182" stroke-width="36" stroke-dasharray="1 165" stroke-linecap="round" />
+        </svg>
+    </div>
+    <div class="container content">
         <header>
             <div class="menu-container pad-sid-40">
                 <div class="logo-wrapper">
@@ -162,45 +180,49 @@
                         <h3>Thanks for contacting us! We will be in touch with you shortly</h3>
                     </div>
                     <div id="formcontact" class="form-contact">
-                    <div class="form-group">
-                        <h5 for="name">Name</h5>
-                        <input 
-                        class="form-control" 
-                        placeholder="Enter your name" 
-                        type="text" 
-                        name="name" 
-                        id="name"
-                        required="true"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <h5 for="lastname">Last Name</h5>
-                        <input 
-                        class="form-control" 
-                        placeholder="Enter your last name" 
-                        type="text" 
-                        name="lastname" 
-                        id="lastname"
-                        required="true"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <h5 for="email">Email</h5>
-                        <input 
-                        class="form-control" 
-                        placeholder="Enter your email" 
-                        type="email" 
-                        name="email" 
-                        id="email"
-                        required="true"
-                        />
-                    </div>
-                    <div class="form-group">
-                        <h5 for="message">Message</h5>
-                        <textarea name="" id="message" rows="6" class="form-control" placeholder="Enter your message" required="true"></textarea>
+                        <div class="form-group">
+                            <h5 for="name">Name</h5>
+                            <input 
+                            class="form-control" 
+                            placeholder="Enter your name" 
+                            type="text" 
+                            name="name" 
+                            id="name"
+                            required
+                            />
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <h5 for="lastname">Last Name</h5>
+                            <input 
+                            class="form-control" 
+                            placeholder="Enter your last name" 
+                            type="text" 
+                            name="lastname" 
+                            id="lastname"
+                            required
+                            />
+                            <span class="error-message" id="lastname-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <h5 for="email">Email</h5>
+                            <input 
+                            class="form-control" 
+                            placeholder="Enter your email" 
+                            type="email" 
+                            name="email" 
+                            id="email"
+                            required
+                            />
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <h5 for="message">Message</h5>
+                            <textarea name="" id="message" rows="6" class="form-control" placeholder="Enter your message" required></textarea>
+                            <span class="error-message" id="message-error"></span>
 
-                    </div>
-                    <button onclick="sendMail()" class="btn btn-primary">Submit</button>
+                        </div>
+                        <button onclick="sendMail()" class="btn btn-primary">Submit</button>
                     </div>
                 </div>       
             </div>
