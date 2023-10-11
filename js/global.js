@@ -83,10 +83,13 @@ function sendMail() {
     .catch((err) => console.log(err));
 }
 
+window.addEventListener('load', function () {
+  // Hide the loading animation
+  document.querySelector('.loading-screen').style.display = 'none';
 
-
-
-
+  // Display the content
+  document.querySelector('.content').style.display = 'block';
+});
 
 
 
