@@ -584,7 +584,9 @@ div#formcontact {
     align-items: center;
 }
 
-
+.error-message {
+    font-size: 12px;
+}
 
 .left-side-footer h4 {
     font-family: 'RobotoTh';
