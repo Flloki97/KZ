@@ -90,9 +90,3 @@ window.addEventListener('load', function () {
   // Display the content
   document.querySelector('.content').style.display = 'block';
 });
-
-
-
-
-
-

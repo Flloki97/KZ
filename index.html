@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="favicon.jpg">
     <title>Kaizen</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/spinkit@1.2.5/css/spinkit.min.css">
 
+    <!-- <script src="https://unpkg.com/split-type"></script> -->
+    <!-- <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
@@ -71,36 +76,36 @@
         <div class="hero-container pad-sid-40" id="home">
             <div class="hero-wrapper-black"></div>
             <div class="wrapper-of-hero">
-                <h1>Welcome to Kaizen Opportunity <br/> Where Careers Thrive</h1>
-                <a href="#contact" class="gt-btn">Get in Touch</a>
+                <h1 id="my-text" class="animate__animated animate__fadeInUp">Welcome to Kaizen Opportunity <br/> Where Careers Thrive</h1>
+                <a href="#contact" class="gt-btn animate__animated animate__fadeInUp">Get in Touch</a>
                 <a href="#aboutus">
-                    <img src="img/arr-dwn.webp" alt="down-arrow" class="dwn-arrow">
+                    <img src="img/arr-dwn.webp" alt="down-arrow" class="dwn-arrow animate__animated animate__fadeInUp">
                 </a>
             </div>
         </div>
         <div class="about-section pad-sid-40 mar-top-30" id="aboutus">
-            <h2>Our Mission</h2>
+            <h2 class="animate__animated animate__fadeInUp">Our Mission</h2>
             <div class="about-content">
-                <div class="text-wrapper">
+                <div class="text-wrapper animate__animated animate__fadeInUp">
                     At Kaizen Opportunity, our mission is clear - to bring together the finest talent and the most prestigious financial institutions. We believe in the power of precision, forging lasting connections that drive success for both candidates and employers. Our dedication to excellence has made us a trusted name in the industry.
                 </div>
-                <div class="img-wrapper">
+                <div class="img-wrapper animate__animated animate__fadeInUp">
                     <img src="img/team.webp" alt="team-image">
                 </div>
             </div>
         </div>
         <div class="services-section pad-sid-40 pad-up-90" id="services">
-            <h2>What Sets Us Apart</h2>
+            <h2 class="animate__animated animate__fadeInUp">What Sets Us Apart</h2>
             <div class="grid-container">
                 <div class="grid-item">
                     <img src="img/experience.webp" alt="icon">
-                    <h5>Expertise</h5>
-                    <p>Our team is composed of industry experts who possess an in-depth understanding of quantitative finance and risk management. We stay ahead of industry trends and are well-versed in the unique challenges and opportunities these fields offer.</p>
+                    <h5 class="animate__animated animate__fadeInUp">Expertise</h5>
+                    <p class="animate__animated animate__fadeInUp">Our team is composed of industry experts who possess an in-depth understanding of quantitative finance and risk management. We stay ahead of industry trends and are well-versed in the unique challenges and opportunities these fields offer.</p>
                 </div>
                 <div class="grid-item">
                     <img src="img/global-marketing.webp" alt="icon">
-                    <h5>Global Reach</h5>
-                    <p>We operate on a global scale, transcending geographical boundaries to unite talent and opportunity. Our extensive network spans the world's financial hubs, ensuring access to the best opportunities no matter where you are.</p>
+                    <h5 class="animate__animated animate__fadeInUp">Global Reach</h5>
+                    <p class="animate__animated animate__fadeInUp">We operate on a global scale, transcending geographical boundaries to unite talent and opportunity. Our extensive network spans the world's financial hubs, ensuring access to the best opportunities no matter where you are.</p>
                 </div>
                 <div class="grid-item">
                     <img src="img/efficacy.webp" alt="icon">
@@ -236,5 +241,8 @@
             </div>
         </footer>
     </div>
+
+    
+
 </body>
 </html>

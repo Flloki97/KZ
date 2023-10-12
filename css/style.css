@@ -600,6 +600,7 @@ div#formcontact {
 	--hue: 223;
 	--bg: hsl(var(--hue),10%,90%);
 	--fg: hsl(var(--hue),10%,10%);
+    --pr-color:#fff;
 	/* font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320)); */
 }
 
@@ -659,4 +660,6 @@ div#formcontact {
 	}
 }
 
-
+.animate__animated .animate__fadeInUp {
+    --animate-delay: 0.9s;
+  }
